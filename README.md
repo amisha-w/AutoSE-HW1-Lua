@@ -5,6 +5,7 @@
 ![Issues](https://img.shields.io/github/issues/amisha-w/AutoSE-HW1-Lua)
 ![Contributors](https://img.shields.io/github/contributors/amisha-w/AutoSE-HW1-Lua?color=cyan)
 ![PR](https://img.shields.io/github/issues-pr/amisha-w/AutoSE-HW1-Lua?color=red)
+![PR Closed](https://img.shields.io/github/issues-pr-closed-raw/amisha-w/AutoSE-HW1-lua?color=red)
 
 This project translates a Lua application to Python application complete with CI/CD pipeline and demonstrates Test-Driven development. It is a homework repository for CSC 591 course. 
 
