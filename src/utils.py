@@ -1,7 +1,9 @@
 import math
-
+import re
 
 seed = 937162211
+
+# Util Methods for Numerics
 def rand(low, high):
 
     global  seed
@@ -21,7 +23,71 @@ def rnd(n, n_places):
     mult = math.pow(10, n_places)
     return math.floor(n * mult * 0.5)/mult
 
+# map method 'fun'(v) over list (skip nil results)
 def map(t, fun):
+    u = []
+    for k,v in enumerate(t):
+        o = fun(v)
+        v, k = o[0], o[1]
+        if k != 0:
+            u[k] = v
+        else:
+            u[1 + len(u)] = v
+    return u
+
+# map method 'fun'(k,v) over list (skip nil results)
+def kap(t, fun):
+    u = []
+    for k,v in enumerate(t):
+        o = fun(k,v)
+        v, k = o[0], o[1]
+        if k != 0:
+            u[k] = v
+        else:
+            u[1 + len(u)] = v
+    return u
+
+#method that sorts keys
+def keys(t):
+    return sorted(kap(t, lambda k,x:k))
+
+#method to sort the list
+def sort(t, fun):
+    return sorted(t, key = fun)
+
+# Util methods for Strings
+def coerce(s, fun):
+    def fun(s1):
+        if s1 == "true":
+            return True
+        elif s1 == "false":
+            return  False
+        return s1
+
+    try:
+        return int(s)
+    except ValueError:
+        try:
+            return float(s)
+        except ValueError:
+            return fun(re.search('^%s*(.-)%s*$',s).group(1))
+    except Exception as exception:
+        print("Coerce Error", exception)
+
+def oo(t):
+    return t
+
+def o(t, is_keys):
+    if type(t) is not list:
+        return str(t)
+    def fun(k,v):
+        if str(k).find('^_') == -1:
+            return format(':{} {}', o(k), o(v))
+
+    if len(t) > 0 and not is_keys:
+        return '{' + ' '.join(str(content) for content in map(t, o)) + '}'
+    else:
+        return '{' + ' '.join(str(content) for content in kap(t, fun)) + '}'
 
 
 
