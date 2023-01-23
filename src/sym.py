@@ -1,33 +1,45 @@
-import math, random
+import math
 
-class Num:
+class Sym:
     def __init__(self):
         self.n = 0
-        self.mu = 0
-        self.m2 = 0
-        self.lo = math.inf
-        self.hi = -math.inf
+        self.has = {}
+        self.most = 0
+        self.mode = None
+    
 
-    def add(self, n):
+    def add(self, x: str):
         '''
-        Adds for n
+        Adds count for x
         '''
-        if n != '?':
+        if x != "?":
             self.n += 1
-            d = n - self.mu
-            self.mu += d/self.n
-            self.m2 += d*(n - self.mu)
-            self.lo = min(n, self.lo)
-            self.hi = max(n, self.hi)
+            if x in self.has:
+                self.has[x] = self.has[x] + 1
+            else:
+                self.has[x] = 1
+
+            if self.has[x] > self.most:
+                self.most = self.has[x]
+                self.mode = x  
+    
     
     def mid(self):
         '''
-        Returns mean value
+        Returns mode 
         '''
-        return self.mu
-    
+        return self.mode
+
+
     def div(self):
         '''
         Returns the standard deviation
         '''
-        return 0 if (self.m2 <0 or self.n < 2) else (self.m2/(self.n-1))**0.5
+        def FUN(p):
+            return p * math.log(p, 2)
+
+        e = 0
+        for key,val in self.has.items():
+            e += FUN(val/self.n)
+
+        return -e
