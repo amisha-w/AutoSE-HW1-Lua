@@ -21,7 +21,7 @@ def rnd(n, n_places):
     if not n_places:
         n_places = 3
     mult = math.pow(10, n_places)
-    return math.floor(n * mult * 0.5)/mult
+    return math.floor(n * mult + 0.5)/mult
 
 # map method 'fun'(v) over list (skip nil results)
 def map(t, fun):
