@@ -6,7 +6,6 @@ def test_num():
     numList = [1,1,1,1,2,2,3]
     for number in numList:
         testObj.add(number)
-    assert 11/7 == testObj.mid()
-    assert 0.787 == rnd(testObj.div(), 3)
+    return 11/7 == testObj.mid() and 0.787 == rnd(testObj.div(), 3)
 
 test_num()
