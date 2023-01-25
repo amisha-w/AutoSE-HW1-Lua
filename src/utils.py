@@ -1,12 +1,14 @@
 import math
 import re
+import sys
+sys.path.append("./src")
+from constants import *
 
 seed = 937162211
 
 # Util Methods for Numerics
 def rand(low, high):
-
-    global  seed
+    global seed
     if low is None:
         low = 0
     if high is None:
@@ -21,11 +23,11 @@ def rnd(n, n_places):
     if not n_places:
         n_places = 3
     mult = math.pow(10, n_places)
-    return math.floor(n * mult * 0.5)/mult
+    return math.floor(n * mult + 0.5)/mult
 
 # map method 'fun'(v) over list (skip nil results)
 def map(t, fun):
-    u = []
+    u = {}
     for k,v in enumerate(t):
         o = fun(v)
         v, k = o[0], o[1]
@@ -33,6 +35,7 @@ def map(t, fun):
             u[k] = v
         else:
             u[1 + len(u)] = v
+    print("U in map: ", u)
     return u
 
 # map method 'fun'(k,v) over list (skip nil results)
@@ -45,6 +48,7 @@ def kap(t, fun):
             u[k] = v
         else:
             u[1 + len(u)] = v
+    print("U in kap: ", u)
     return u
 
 #method that sorts keys
@@ -56,7 +60,7 @@ def sort(t, fun):
     return sorted(t, key = fun)
 
 # Util methods for Strings
-def coerce(s, fun):
+def coerce(s):
     def fun(s1):
         if s1 == "true":
             return True
@@ -70,15 +74,15 @@ def coerce(s, fun):
         try:
             return float(s)
         except ValueError:
-            return fun(re.search('^%s*(.-)%s*$',s).group(1))
+            return fun(s)
     except Exception as exception:
         print("Coerce Error", exception)
 
 def oo(t):
-    return t
+    print(o(t, False))
 
-def o(t, is_keys):
-    if type(t) is not list:
+def o(t, is_keys = True):
+    if type(t) is not dict:
         return str(t)
     def fun(k,v):
         if str(k).find('^_') == -1:
@@ -88,6 +92,12 @@ def o(t, is_keys):
         return '{' + ' '.join(str(content) for content in map(t, o)) + '}'
     else:
         return '{' + ' '.join(str(content) for content in kap(t, fun)) + '}'
+
+
+def eg(key, str, fun):
+    egs[key] = fun
+    global help
+    help = help + '  -g '+ key + '\t' + str + '\n'
 
 
 
