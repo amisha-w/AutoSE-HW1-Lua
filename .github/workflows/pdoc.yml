@@ -1,7 +1,7 @@
 # Reference: https://github.com/ashishjoshi2605/ncsu-campus-jobs-review-system/blob/main/.github/workflows/pdoc.yml
 
 
-name: website
+name: documentation
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
 
-      - run: pip install pdoc3]
+      - run: pip install pdoc3
       - run: | 
             pdoc ./src/main.py -o ./docs
             pdoc ./src/num.py -o ./docs
