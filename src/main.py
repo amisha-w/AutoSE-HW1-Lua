@@ -1,5 +1,5 @@
 import sys
-from utils import *
+from src import utils
 import re
 
 def cli(options):

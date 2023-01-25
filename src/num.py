@@ -1,4 +1,4 @@
-from constants import *
+from src import constants
 
 class Num:
     def __init__(self):

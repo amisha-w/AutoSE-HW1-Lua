@@ -1,7 +1,7 @@
 import math
 import re
 import sys
-from constants import *
+from src import constants
 
 seed = 937162211
 
