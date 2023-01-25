@@ -19,7 +19,7 @@ def settings(s):
     '''
     Applies regex to identify key value pairs
     '''
-        return dict(re.findall("\n[\s]+[-][\S]+[\s]+[-][-]([\S]+)[^\n]+= ([\S]+)", s))
+    return dict(re.findall("\n[\s]+[-][\S]+[\s]+[-][-]([\S]+)[^\n]+= ([\S]+)", s))
 
 def main(options, help, funs):
     '''
