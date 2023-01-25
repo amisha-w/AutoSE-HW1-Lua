@@ -10,7 +10,7 @@ class Sym:
 
     def add(self, x: str):
         '''
-        Adds count for x
+        Method for calculating count of x
         '''
         if x != "?":
             self.n += 1
@@ -26,15 +26,15 @@ class Sym:
     
     def mid(self):
         '''
-        Returns mode 
+        Method which returns mode value
         '''
         return self.mode
 
 
     def div(self):
-        '''
-        Returns the standard deviation
-        '''
+        """
+        Method which returns standard deviation value
+        """
         def FUN(p):
             return p * math.log(p, 2)
 
