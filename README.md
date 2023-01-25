@@ -4,7 +4,7 @@
 
 
  # `Lua to Python - AutoSE HW1`
- </div>
+
 
 ![license](https://img.shields.io/github/license/amisha-w/AutoSE-HW1-Lua)
 [![language](https://img.shields.io/github/languages/top/amisha-w/AutoSE-HW1-Lua)](https://github.com/amisha-w/AutoSE-HW1-Lua/search?l=python)
@@ -21,6 +21,8 @@
 [![Pylint](https://img.shields.io/github/actions/workflow/status/amisha-w/AutoSE-HW1-Lua/pylint.yml?label=Pylint)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/pylint.yml)
 [![Python Style Checker](https://img.shields.io/github/actions/workflow/status/amisha-w/AutoSE-HW1-Lua/style_checker.yml?label=Style%20Checker)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/style_checker.yml)
 ![GitHub Release Date](https://img.shields.io/github/release-date/amisha-w/AutoSE-HW1-Lua)<br/>
+
+ </div>
 
 This project translates a Lua application to Python application complete with CI/CD pipeline and demonstrates Test-Driven development. It is a homework repository for CSC 591 course. 
 
