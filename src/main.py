@@ -4,6 +4,9 @@ from utils import *
 import re
 
 def cli(options):
+    '''
+    Parses help string into options
+    '''
     args = sys.argv[1:]
     for key, value in options.items():
         for n, x in enumerate(args):
@@ -13,10 +16,15 @@ def cli(options):
     return options
 
 def settings(s):
+    '''
+    Applies regex to identify key value pairs
+    '''
         return dict(re.findall("\n[\s]+[-][\S]+[\s]+[-][-]([\S]+)[^\n]+= ([\S]+)", s))
 
 def main(options, help, funs):
-    print(options)
+    '''
+    Runs tests and prints output
+    '''
     saved = {}
     fails = 0
     for k,v in cli(settings(help)).items():
