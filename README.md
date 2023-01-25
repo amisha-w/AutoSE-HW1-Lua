@@ -1,4 +1,4 @@
-# Lua - Python (HW Automated SE)
+
 <div align="center">
  <img src="./docs/code.svg" width="100px"></img>
 
@@ -7,17 +7,22 @@
  </div>
 
 ![license](https://img.shields.io/github/license/amisha-w/AutoSE-HW1-Lua)
-<!-- [![test](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/python_test_workflow.yml/badge.svg)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/python_test_workflow.yml) -->
+[![language](https://img.shields.io/github/languages/top/amisha-w/AutoSE-HW1-Lua)](https://github.com/amisha-w/AutoSE-HW1-Lua/search?l=python)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7567006.svg)](https://doi.org/10.5281/zenodo.7567006)<br>
+[![Unit Tests](https://img.shields.io/github/actions/workflow/status/amisha-w/AutoSE-HW1-Lua/tests.yml?label=Unit%20Tests)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/tests.yml)
+[![Commits](https://img.shields.io/github/commit-activity/w/amisha-w/AutoSE-HW1-Lua)](https://github.com/amisha-w/AutoSE-HW1-Lua/graphs/commit-activity)
 ![Repo Size](https://img.shields.io/github/repo-size/amisha-w/AutoSE-HW1-Lua)
-![Issues](https://img.shields.io/github/issues/amisha-w/AutoSE-HW1-Lua)
+![Open Issues](https://img.shields.io/github/issues/amisha-w/AutoSE-HW1-Lua)
+[![Closed issues](https://img.shields.io/github/issues-closed-raw/amisha-w/AutoSE-HW1-Lua)](https://github.com/amisha-w/AutoSE-HW1-Lua/issues?q=is%3Aissue+is%3Aclosed)
 ![Contributors](https://img.shields.io/github/contributors/amisha-w/AutoSE-HW1-Lua?color=cyan)
 ![PR](https://img.shields.io/github/issues-pr/amisha-w/AutoSE-HW1-Lua?color=red)
 ![PR Closed](https://img.shields.io/github/issues-pr-closed-raw/amisha-w/AutoSE-HW1-lua?color=red)
 [![Pylint](https://img.shields.io/github/actions/workflow/status/amisha-w/AutoSE-HW1-Lua/pylint.yml?label=Pylint)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/pylint.yml)
 [![Python Style Checker](https://img.shields.io/github/actions/workflow/status/amisha-w/AutoSE-HW1-Lua/style_checker.yml?label=Style%20Checker)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/style_checker.yml)
-[![Commits](https://img.shields.io/github/commit-activity/w/amisha-w/AutoSE-HW1-Lua)](https://github.com/amisha-w/AutoSE-HW1-Lua/graphs/commit-activity)
+![GitHub Release Date](https://img.shields.io/github/release-date/amisha-w/AutoSE-HW1-Lua)<br/>
 
 This project translates a Lua application to Python application complete with CI/CD pipeline and demonstrates Test-Driven development. It is a homework repository for CSC 591 course. 
+
 
 ## Features
 | Function      |Description    |
@@ -25,6 +30,7 @@ This project translates a Lua application to Python application complete with CI
 | Hw1 Main       | Parses the helper string and csv file. |
 | Num       | Class to calculate mean and standard deviation for numeric values. |
 | Sym      | Class to calculate mode and frequency of symbolic values. |
+
 
 ## Installation Guide
 
@@ -49,6 +55,7 @@ The rules listed below are to be followed by the ones who will be contributing t
   - _Project Owners_ - Initiaters and maintainers of the file.
   - _Project contributors_ - People who think existing features can be simplified or new features can be added to improve the project.
   - _Users_ - Customers who want to clone the repository and use it create their own project.
+
 
 ## Contributors
   
