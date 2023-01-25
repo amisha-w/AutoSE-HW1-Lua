@@ -7,6 +7,7 @@ from constants import *
 seed = 937162211
 
 # Util Methods for Numerics
+# Random number generator method
 def rand(low, high):
     global seed
     if low is None:
@@ -16,6 +17,7 @@ def rand(low, high):
     seed = (16807 * seed) % 2147483647
     return low + (high -low) * seed / 2147483647
 
+# flooring method
 def rint(low, high):
     return math.floor(0.5 + rand(low, high))
 
@@ -78,9 +80,11 @@ def coerce(s):
     except Exception as exception:
         print("Coerce Error", exception)
 
+# Method to print values
 def oo(t):
     print(o(t, False))
 
+# Method to format string values
 def o(t, is_keys = True):
     if type(t) is not dict:
         return str(t)
@@ -93,7 +97,7 @@ def o(t, is_keys = True):
     else:
         return '{' + ' '.join(str(content) for content in kap(t, fun)) + '}'
 
-
+# Method to map values for test cases
 def eg(key, str, fun):
     egs[key] = fun
     global help

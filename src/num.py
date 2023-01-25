@@ -12,7 +12,7 @@ class Num:
 
     def add(self, n):
         '''
-        Adds for n
+        Addition method for n
         '''
         if n != "?":
             self.n = self.n + 1
@@ -24,12 +24,12 @@ class Num:
 
     def mid(self):
         '''
-        Calculates mean
+        Method for calculating mean
         '''
         return self.mu
 
     def div(self):
         '''
-        Calculates standard deviation
+        Method for calculating Standard Deviation
         '''
         return (self.m2 < 0 or self.n < 2) and 0 or (self.m2 / (self.n - 1)) ** 0.5
