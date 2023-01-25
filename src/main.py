@@ -1,5 +1,4 @@
 import sys
-sys.path.insert(1, "../test")
 from utils import *
 import re
 
