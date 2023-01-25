@@ -1,6 +1,5 @@
 import sys
-sys.path.insert(1, "../test")
-from utils import *
+from src.utils import *
 import re
 
 def cli(options):
