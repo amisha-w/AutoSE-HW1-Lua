@@ -1,4 +1,6 @@
-from src import constants
+import sys
+sys.path.append("./src")
+from constants import *
 
 class Num:
     def __init__(self):

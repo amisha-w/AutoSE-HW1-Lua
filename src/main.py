@@ -1,5 +1,6 @@
 import sys
-from src import utils
+sys.path.append("./src")
+from utils import *
 import re
 
 def cli(options):
