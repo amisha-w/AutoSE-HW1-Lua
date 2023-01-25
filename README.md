@@ -11,6 +11,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7567006.svg)](https://doi.org/10.5281/zenodo.7567006)<br>
 [![Unit Tests](https://img.shields.io/github/actions/workflow/status/amisha-w/AutoSE-HW1-Lua/tests.yml?label=Unit%20Tests)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/gh/amisha-w/AutoSE-HW1-Lua/branch/main/graph/badge.svg?token=)](https://codecov.io/gh/amisha-w/AutoSE-HW1-Lua)<br/>
+[![documentation](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/pdoc.yml/badge.svg)](https://github.com/amisha-w/AutoSE-HW1-Lua/actions/workflows/pdoc.yml)
 [![Commits](https://img.shields.io/github/commit-activity/w/amisha-w/AutoSE-HW1-Lua)](https://github.com/amisha-w/AutoSE-HW1-Lua/graphs/commit-activity)
 ![Repo Size](https://img.shields.io/github/repo-size/amisha-w/AutoSE-HW1-Lua)
 ![Open Issues](https://img.shields.io/github/issues/amisha-w/AutoSE-HW1-Lua)
