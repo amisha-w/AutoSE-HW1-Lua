@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(1, "../src")
+sys.path.append("./src")
 
 from main import*
 from utils import*
