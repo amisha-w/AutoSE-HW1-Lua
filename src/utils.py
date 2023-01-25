@@ -1,7 +1,6 @@
 import math
 import re
 import sys
-sys.path.append("./src")
 from constants import *
 
 seed = 937162211
