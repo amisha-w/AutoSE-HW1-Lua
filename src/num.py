@@ -11,6 +11,9 @@ class Num:
         self.lo = MIN_VALUE
 
     def add(self, n):
+        '''
+        Adds for n
+        '''
         if n != "?":
             self.n = self.n + 1
             d = n - self.mu
@@ -20,7 +23,13 @@ class Num:
             self.hi = max(n, self.hi)
 
     def mid(self):
+        '''
+        Calculates mean
+        '''
         return self.mu
 
     def div(self):
+        '''
+        Calculates standard deviation
+        '''
         return (self.m2 < 0 or self.n < 2) and 0 or (self.m2 / (self.n - 1)) ** 0.5
