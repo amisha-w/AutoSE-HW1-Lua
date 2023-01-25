@@ -1,6 +1,6 @@
-from src.constants import *
+from constants import *
 
-class NUM:
+class Num:
     def __init__(self):
         self.n = 0
         self.mu = 0

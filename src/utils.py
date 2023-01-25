@@ -1,5 +1,8 @@
 import math
 import re
+import sys
+sys.path.append("./src")
+from constants import *
 
 seed = 937162211
 
@@ -89,6 +92,12 @@ def o(t, is_keys = True):
         return '{' + ' '.join(str(content) for content in map(t, o)) + '}'
     else:
         return '{' + ' '.join(str(content) for content in kap(t, fun)) + '}'
+
+
+def eg(key, str, fun):
+    egs[key] = fun
+    global help
+    help = help + '  -g '+ key + '\t' + str + '\n'
 
 
 

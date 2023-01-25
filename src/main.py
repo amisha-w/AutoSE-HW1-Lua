@@ -1,15 +1,7 @@
 import sys
-
-from test.NumTest import test_num
-from src.utils import coerce,o,oo
+sys.path.insert(1, "../test")
+from utils import *
 import re
-from src.the import *
-
-from test import *
-from test.SymTest import test_sym
-from test.RandTest import RandTest
-from test.TheTest import TestThe
-
 
 def cli(options):
     args = sys.argv[1:]
@@ -23,42 +15,25 @@ def cli(options):
 def settings(s):
         return dict(re.findall("\n[\s]+[-][\S]+[\s]+[-][-]([\S]+)[^\n]+= ([\S]+)", s))
 
-
-eg = {}
-def setEg(the):
-    global eg
-    eg = {"num": ["check_syms", test_num], "sym": ["check_nums", test_sym], "rand": ["generate, reset, regenerate same", RandTest(the["seed"]).testRand],
-          "the" : ["show settings", TestThe(the).testthe]}
-
-def concat(help, testcases):
-    help+=help
-    for i in testcases:
-        help+=" -g  {0}\t{1}\n".format(i, testcases[i][0])
-    return help
 def main(options, help, funs):
-    
+    print(options)
     saved = {}
     fails = 0
     for k,v in cli(settings(help)).items():
         options[k] = v
         saved[k] = v
-    setEg(options)
-    funs = eg
-    help = concat(help, eg)
 
     if options['help']:
         print(help)
     else:
         for what, fun in funs.items():
             if options['go'] == 'all' or options['go'] == what:
+                print("--")
                 for k,v in saved.items():
                     options[k] = v
                 Seed = options['seed']
-                if funs[what][1]() == False:
+                if funs[what]() == False:
                     fails += 1
                     print("❌ fail:", what)
                 else:
                     print("✅ pass:", what)
-            
-if __name__ == '__main__':
-    main(the, getConstants('help'),eg)
